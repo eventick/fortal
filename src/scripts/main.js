@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
   var sge_events = angular.module('eventsSearch', ['ngRoute', 'eventsSearch.services', 'eventsSearch.controllers']);
 
@@ -20,17 +20,14 @@
 
   var services = angular.module('eventsSearch.services', []);
   var controllers = angular.module('eventsSearch.controllers', []);
-  //var filters = angular.module('eventsSearch.filters', []);
-  //var factories = angular.module('eventsSearch.factories', []);
-  //var directives = angular.module('eventsSearch.directives', []);
 
   services.factory('CSService', ['$http',
   function($http){
     var mount_params = function(params){
       var parsed_params = params.q !== undefined ? "(and '" + params.q + "' start_at:0.." : "(and start_at:0..";
 
-      if (params.estado !== undefined) { parsed_params += " address_region:'" + encodeURI(params.estado) + "'"; }
-      if (params.tematica !== undefined) { parsed_params += " sge_theme:'" + encodeURI(params.tematica) + "'"; }
+      if (params.estado !== undefined && params.estado != '') { parsed_params += " address_region:'" + params.estado + "'"; }
+      if (params.tematica !== undefined && params.tematica != '') { parsed_params += " sge_theme:'" + params.tematica + "'"; }
 
       return parsed_params + ')';
     }
@@ -67,29 +64,29 @@
   }]);
 
   controllers.controller('homeCtrl', ['$scope', '$location', 'CSService', function($scope, $location, CSService) {
-    CSService.getStates(function(states){
-      $scope.states = states;
-    });
+    CSService.getStates(function(states){ $scope.states = states });
 
-    CSService.getThemes(function(themes){
-      $scope.themes = themes;
-    });
+    CSService.getThemes(function(themes){ $scope.themes = themes });
 
-    $scope.submitSearch = function(){
-      $location.path('/eventos').search({q: $scope.q});
-    };
+    $scope.submitSearch = function(){ $location.path('/eventos').search( {q: $scope.q} ) };
   }]);
 
-  controllers.controller('eventsCtrl', ['$scope', '$routeParams', 'CSService', function($scope, $routeParams, CSService) {
-    CSService.getEvents($routeParams, function(events){
-      $scope.events = events;
-    });
+  controllers.controller('eventsCtrl', ['$scope', '$routeParams', '$location', 'CSService', function($scope, $routeParams, $location, CSService) {
+    $scope.current_state = $routeParams.estado;
+    $scope.current_theme = $routeParams.tematica;
+    $scope.q = $routeParams.q;
+
+    CSService.getStates(function(states){ $scope.states = states });
+
+    CSService.getThemes(function(themes){ $scope.themes = themes });
+
+    CSService.getEvents($routeParams, function(events){ $scope.events = events });
 
     $scope.filterEvents = function(){
       $routeParams.q = $scope.q;
+      $routeParams.estado = $scope.current_state;
+      $routeParams.tematica = $scope.current_theme;
 
-      CSService.getEvents($routeParams, function(events){
-        $scope.events = events;
-      });
+      $location.path('/eventos').search($routeParams);
     }
   }]);

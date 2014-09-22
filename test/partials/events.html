@@ -1,26 +1,14 @@
 <section class="lpz-eb">
   <div class="lpz-eb_control">
-    <div class="lpz-eb_control--buttongroup">
-      <a href="" class="lpz-eb_control--button">
-        <span class="lpz-eb_span">exibindo eventos em</span>
-        <strong>todo o Brasil</strong></a>
-      <a href="" class="lpz-eb_control--button">
-      <i class="lpz-eb_control--button__icon fa fa-calendar"></i>
-        <span class="lpz-eb_span">exibindo eventos</span>
-        <strong>futuros</strong></a>
-    </div>
+    <select ng-model="current_state"  ng-change="filterEvents()">
+      <option value="">Estados</option>
+      <option ng-repeat="state in states" ng-value="state.value">{{state.value}}</option>
+    </select>
 
-    <fieldset class="lpz-eb_orderby">
-      <span class="lpz-eb_orderby--title">ordenar por</span>
-      <label class="lpz-radio">
-        <input class="lpz-radio_input" type="radio" checked="checked" name="tax" />
-        <span class="lpz-radio_span"></span>relevância
-      </label>
-      <label class="lpz-radio">
-        <input class="lpz-radio_input" type="radio" checked="checked" name="tax" />
-        <span class="lpz-radio_span"></span>data
-      </label>
-    </fieldset>
+    <select ng-model="current_theme" ng-change="filterEvents()">
+      <option value="">Temática</option>
+      <option ng-repeat="theme in themes" ng-value="theme.value">{{theme.value}}</option>
+    </select>
     <form ng-submit="filterEvents()">
       <input type="search" name="q" ng-model="q" value="">
       <input type="submit" id="submit" value="Buscar" />
