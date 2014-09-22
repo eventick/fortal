@@ -1,0 +1,12 @@
+<form ng-submit="submitSearch()">
+  <input type="search" name="q" ng-model="q" value="">
+  <input type="submit" id="submit" value="Buscar" />
+</form>
+
+<ul>
+  <li ng-repeat="state in states"><a href="/#/eventos?estado={{state.value}}">{{state.value}} ({{state.count}})</a></li>
+</ul>
+
+<ul>
+  <li ng-repeat="theme in themes"><a href="/#/eventos?tematica={{theme.value}}">{{theme.value}} ({{theme.count}})</a></li>
+</ul>

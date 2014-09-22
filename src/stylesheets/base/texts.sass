@@ -1,0 +1,66 @@
+// Texts def
+
+// Vars
+
+$txt-body             : 14
+$txt-p                : 16
+$txt-h1               : 72
+$txt-h2               : 64
+$txt-h3               : 48
+$txt-h4               : 32
+$txt-h5               : 24
+$txt-h6               : 18
+
+// Base Text def
+
+=text()
+  //box-model
+  display             : block
+
+=heading()
+  @include            text
+
+  line-height         : 1.2
+  margin-top          : 0
+
+=paragraph()
+  @include            text
+
+  line-height         : 1.5
+
+
+// Font Context
+
+=sizing($target, $context)
+  font-size           : ($target / $context) * 1em
+
+
+// Tags def
+
+body
+  font-size           : $txt-body * 1px
+
+p
+  +paragraph
+  +sizing($txt-p, $txt-body)
+
+h1, h2, h3, h4, h5, h6
+  +heading
+
+h1
+  +sizing($txt-h1, $txt-body)
+
+h2
+  +sizing($txt-h2, $txt-body)
+
+h3
+  +sizing($txt-h3, $txt-body)
+
+h4
+  +sizing($txt-h4, $txt-body)
+
+h5
+  +sizing($txt-h5, $txt-body)
+
+h6
+  +sizing($txt-h6, $txt-body)

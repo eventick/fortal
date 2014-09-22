@@ -1,0 +1,43 @@
+// Forms def
+
+// Placeholder for Input Placeholder
+
+=ph_basics()
+  opacity           : 0.8
+
+=placeholder()
+  &::-webkit-input-placeholder
+    +ph_basics()
+  &:-moz-placeholder
+    +ph_basics()
+  &::-moz-placeholder
+    +ph_basics()
+  &:-ms-input-placeholder
+    +ph_basics()
+
+=input_normal($color: #333)
+  color               : $color
+  // border
+  border              : 1px solid $color
+  padding             : 20px 15px
+  // border
+  border-radius       : 4px
+
+  // text
+  text-align          : left
+  line-height         : 1
+
+// Input Tag
+input
+  //box-model
+  display           : inline-block
+  padding           : 0
+  margin            : 0
+
+
+// Label Tag
+label
+  //box-model
+  display           : inline-block
+  padding           : 0
+  margin            : 0

@@ -1,0 +1,57 @@
+// colors
+
+$lpz-efb-input                  : #b6b7c3
+$lpz-efb-button-shadow          : #a1ab27
+
+
+// components
+
+.lpz-efb
+  text-align: center
+  margin: 30px 5% 50px
+
+.lpz-efb_title
+  +pacifico()
+  color: $clr-land-purple
+
+.lpz-efb_form
+  +cf()
+
+.lpz-efb_form--input
+  +placeholder()
+  +input_normal($lpz-efb-input)
+  +sizing(18,14)
+
+.lpz-efb_form--input__text
+  +col(4/12)
+  box-sizing: border-box
+  padding-left: 20px
+  text-align: left
+
+.lpz-efb_form--input__email
+  +col(5.2/12)
+  box-sizing: border-box
+  padding-left: 20px
+  text-align: left
+
+.lpz-efb_form--button
+  +col(2.8/12)
+  box-sizing: border-box
+  +button_normal($clr-land-green, $lpz-efb-button-shadow)
+  margin-right: 0
+  +sizing(18,14)
+  height: 60px
+  padding-left: 0
+  padding-right: 0
+
+.lpz-efb_line
+  +cf()
+  font-weight: 500
+  +sizing(20,14)
+  padding-top: 64px
+  text-align: right
+  margin: 20px 0 0
+  color: $clr-land-gy-3
+
+  a
+    +link($clr-land-blue, $clr-land-red)

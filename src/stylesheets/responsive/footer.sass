@@ -1,0 +1,69 @@
+@media (max-width: 768px)
+  .lpz-sb_list
+    margin: 0 10%
+  .lpz-efb_form--input, .lpz-efb_form--button
+    +stack()
+
+  .lpz-efb_form--input, .lpz-efb_form--button
+    margin-bottom: 10px
+
+  .lpz-efb_form
+    box-sizing: border-box
+    margin: 0
+    padding: 0 10%
+
+  .lpz-sb_list--item
+    +col(1/2)
+    margin-bottom: 30px
+    &:nth-child(2n + 2)
+      margin-right: 0
+
+  .lpz-efb_form--button
+    +sizing(18, 14)
+
+  .lpz-efb_line
+    padding-top: 0
+
+@media (min-width: 835px) and (max-width: 920px)
+  .lpz-efb_form--button
+    +sizing(16, 14)
+
+@media (min-width: 769px) and (max-width: 834px)
+  .lpz-efb_form--button
+    +sizing(14, 14)
+
+@media (min-width: 920px) and (max-width: 1200px)
+  .lpz-sb_list--item__icon
+    &.fa
+      &:before
+        +sizing(140, 14)
+
+@media (min-width: 769px) and (max-width: 919px)
+  .lpz-sb_list--item__icon
+    &.fa
+      &:before
+        +sizing(110, 14)
+
+@media (min-width: 576px) and (max-width: 657px)
+  .lpz-sb_list--item__icon
+    &.fa
+      &:before
+        +sizing(140, 14)
+
+@media (max-width: 576px)
+  .lpz-sb_list--item__icon
+    &.fa
+      &:before
+        +sizing(105, 14)
+
+@media (max-width: 477px)
+  .lpz-sb_list--item__title
+    +sizing(20,14)
+
+@media (max-width: 410px)
+  .lpz-sb_list--item__icon
+    &.fa
+      &:before
+        +sizing(80, 14)
+  .lpz-sb_list--item__title
+    +sizing(16,14)

@@ -1,0 +1,77 @@
+.lpz-mheader
+  background: url(../images/header.png) no-repeat right bottom, url(../images/header-bg.jpg) no-repeat
+  background-size: 55%, auto
+  color: $clr-white
+  padding: 20px 5% 50px
+  box-sizing: border-box
+  height: 550px
+  +cf()
+
+.lpz-mheader_hero
+  +col(7/12)
+  margin: 40px 0
+
+.lpz-mheader_hero--title
+  +pacifico()
+  max-width: 522px
+  margin: 0 0 30px
+
+.lpz-mheader_hero--p
+  margin: 0 0 30px
+  max-width: 408px
+  +sizing(18,14)
+
+  em
+    font-style: normal
+    text-decoration: underline
+
+.lpz-mheader_hero--group
+  +col(12/12)
+
+.lpz-mheader_hero--group__button__normal
+  +button_normal($clr-land-green, $lpz-efb-button-shadow)
+  margin-right: 3%
+  box-sizing: border-box
+  +sizing(18, 14)
+
+.lpz-mheader_hero--group__button__link
+  +button_bordered($clr-white, $clr-land-green, .5)
+  position: relative
+  top: -2px
+  box-sizing: border-box
+  +sizing(18, 14)
+
+.lpz-mnav
+  +cf()
+  position: relative
+
+.lpz-mnav_search
+  +col(7/12)
+
+.lpz-mnav_logo
+  +col(3/12)
+
+.lpz-mnav_menu
+  display: none
+  margin-left: 10%
+  margin-top: 6px
+  position: absolute
+  cursor: pointer
+  &.fa
+    &:before
+      +sizing(40, 14)
+
+.lpz-mnav_link
+  +col(2/12)
+  +align(vertical)
+  text-align: right
+  text-transform: uppercase
+  +proxima_semibold()
+  +sizing(16,14)
+  +link($clr-white, $clr-land-yellow)
+
+.lpz-mnav_link--icon
+  margin-right: 10px
+  &.fa
+    &:before
+      +sizing(20,14)

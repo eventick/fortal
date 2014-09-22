@@ -1,0 +1,45 @@
+.lpz-lb
+  text-align: center
+  margin: 50px 0 100px
+
+.lpz-lb_list
+  +unordered_list()
+
+.lpz-lb_list--item
+  margin-bottom: 15px
+  +sizing(18, 14)
+
+  a
+    +link($clr-land-blue, $clr-land-red)
+
+.lpz-lb_title
+  +pacifico()
+  margin: 0
+  +sizing(70, 14)
+
+.lpz-lb_title--sub
+  margin: 100px 0 20px
+  +proxima_semibold()
+  font-weight: 600
+  +sizing(20,14)
+
+  &:first-child
+    margin-top: 50px
+
+.lpz-lb_title--line
+  margin: 20px 0 60px
+  color: $clr-land-gy-3
+
+.lpz-lb_no-title
+  margin-bottom: 30px
+  text-transform: uppercase
+
+.lb-list--item__more
+  display: block
+  text-transform: uppercase
+  text-align: center
+  +sizing(12, 14)
+  color: $clr-land-gy-3
+
+  strong
+    color: $clr-black

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="eventsSearch">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lollapalooza | Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <script type="text/javascript" src="https://code.angularjs.org/1.3.0-rc.2/angular.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.3.0-rc.2/angular-resource.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.3.0-rc.2/angular-route.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/nqg1gvp.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+  <div class="lpz-body">
+    <section class="lpz-search">
+      <form action="" class="lpz-search_form">
+          <fieldset class="lpz-inputton2">
+            <i class="lpz-inputton2_icon fa fa-search"></i>
+            <input type="text" class="lpz-inputton2_input" placeholder="Procure por um evento por nome, cidade ou local">
+            <button class="lpz-inputton2_button">Procurar</button>
+          </fieldset>
+        </form>
+    </section>
+
+    <div ng-view></div>
+
+  </div>
+
+  <script src="scripts/app.js"></script>
+  </body>
+</html>

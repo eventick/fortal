@@ -1,0 +1,72 @@
+.lpz-header
+  padding: 20px 5%
+  +cf()
+
+.lpz-header_nav
+  +cf()
+  position: relative
+
+.lpz-header_menu
+  display: none
+  margin-top: 6px
+  position: absolute
+  cursor: pointer
+  color: $clr-land-purple
+  &.fa
+    &:before
+      +sizing(40, 14)
+
+.lpz-header_nav--list
+  +unordered_list()
+  +inline-blocked_list()
+  +align(both)
+
+.lpz-header_nav--list__item
+  // text
+  text-transform    : uppercase
+  margin-right      : 15px
+  +sizing(18,14)
+  font-weight: 600
+
+  &:last-child
+    margin: 0
+
+  a
+    +link($crl-lpz-links, $clr-land-gy-3)
+
+.lpz-header_nav--logo
+  +col(2/12)
+
+.lpz-header_nav--button
+  +button_normal($clr-land-green, $lpz-efb-button-shadow)
+  +align(vertical)
+  right: 105px
+  &:hover
+    top: 20px
+
+.lpz-header_nav--buttongroup
+  +col(4/12)
+  float: right
+
+.lpz-header_nav--link
+  +link($clr-land-gy-2, $clr-land-yellow)
+  +align(vertical)
+  text-align: right
+  text-transform: uppercase
+  +proxima_semibold()
+  +sizing(16,14)
+  right: 0
+
+.lpz-header_nav--link__icon
+  margin-right: 10px
+  &.fa
+    &:before
+      +sizing(16,14)
+
+@media (max-width: 1075px)
+  .lpz-header_nav--list
+    +col(6/12)
+
+@media (max-width: 930px)
+  .lpz-header_nav--list
+    margin-left: -6%

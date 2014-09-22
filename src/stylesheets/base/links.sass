@@ -1,0 +1,22 @@
+// Link def
+
+=link($color: #fff, $transition: #000)
+  //params
+  color                   : $color
+
+  //box-model
+  padding                 : 0
+  margin                  : 0
+
+  // text
+  line-height             : 1
+  display                 : inline-block
+
+  &:hover, &:active, &:focus
+    +anim_links($transition)
+
+// A tag
+a
+  // reset
+  text-decoration         : none
+

@@ -1,0 +1,58 @@
+// Button def
+
+// Base def
+=button()
+  //box-model
+  margin              : 0
+
+  // border
+  border-radius       : 4px
+
+  // text
+  text-align          : center
+  text-transform      : uppercase
+  line-height         : 1
+
+// Normal Button
+=button_normal($bg: #000, $shadow: #000, $color: #fff)
+  // params
+  background-color    : $bg
+  color               : $color
+
+  // border
+  border              : none
+  box-shadow          : 0 4px $shadow
+
+  +button()
+  padding             : 22px 15px 16px
+
+  +proxima_semibold()
+  +sizing(16, 14)
+  +anim_button($shadow)
+
+// Bordered Button
+=button_bordered($color: #000, $active: #fff, $opacity: .05)
+  // params
+  color               : $color
+
+  // border
+  border              : 1px solid $color
+
+  +button()
+  padding             : 20px 15px
+
+  +anim_button_bordered($opacity, $active)
+
+// Search Button
+=button_input($bg: #000, $color: #fff)
+  background-color    : $bg
+  color               : $color
+  padding             : 14.5px 0
+  border-radius       : 3px
+  text-transform      : uppercase
+  text-align          : center
+  border              : 1px solid #333
+
+// Button tag
+button
+  +button()

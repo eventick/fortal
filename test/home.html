@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="eventsSearch">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lollapalooza | Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.9">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <script type="text/javascript" src="//use.typekit.net/nqg1gvp.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body ng-controller="EventsSearchController">
+
+  <nav class="lpz-offcanvas" data-lpz="offcanvas" data-offcanvas="closed">
+    <ul class="lpz-offcanvas_list">
+      <li class="lpz-offcanvas_list--item">
+      <i class="lpz-offcanvas_list--item__icon fa fa-sign-in"></i>
+      <a href="">Entrar</a></li>
+      <li class="lpz-offcanvas_list--item">
+      <i class="lpz-offcanvas_list--item__icon fa fa-search"></i>
+      <a href="">Encontrar eventos</a></li>
+      <li class="lpz-offcanvas_list--item">
+      <i class="lpz-offcanvas_list--item__icon fa fa-wrench"></i>
+      <a href="">Suporte</a></li>
+    </ul>
+  </nav>
+
+  <div class="lpz-body" data-offcbody="normal">
+  <header class="lpz-mheader">
+    <nav class="lpz-mnav">
+      <div class="lpz-mnav_logo">
+        <i class="lpz-mnav_menu fa fa-bars" data-lpz="menu"></i>
+        <img src="images/logo-header.png" alt="">
+      </div>
+      <form action="" class="lpz-mnav_search">
+        <fieldset class="lpz-inputton">
+          <i class="lpz-inputton_icon fa fa-search"></i>
+          <input type="text" class="lpz-inputton_input" placeholder="Procure por um evento por nome, cidade ou local">
+          <button class="lpz-inputton_button">Procurar</button>
+        </fieldset>
+      </form>
+      <a href="" class="lpz-mnav_link">
+        <i class="lpz-mnav_link--icon fa fa-sign-in"></i>
+        Entrar
+      </a>
+    </nav>
+    <section class="lpz-mheader_hero">
+      <h2 class="lpz-mheader_hero--title">Vender tickets online é simples</h2>
+      <p class="lpz-mheader_hero--p">Em menos de 5 minutos você cria seu evento e começa
+      a vender tickets com cartão, débito em conta e boleto bancário. Sabe <em>quanto custa</em> criar uma? <strong>Nada</strong>.</p>
+      <div class="lpz-mheader_hero--group">
+        <a href="" class="lpz-mheader_hero--group__button__normal">Criar um evento</a>
+        <a href="" class="lpz-mheader_hero--group__button__link">
+        <span class="lpz-anim_span">Como funciona</span>
+        <span class="lpz-anim_span lpz-bs_span"> o Eventick</span>
+        <span class="lpz-anim_span">?</span></a>
+      </div>
+    </section>
+  </header>
+
+  <header class="lpz-sheader" data-lpz="fixedmenu">
+    <nav class="lpz-nav">
+      <ul class="lpz-nav_list">
+        <li class="lpz-nav_list--item"><a data-hover="Encontre um evento" href="">Encontre um evento</a></li>
+        <li class="lpz-nav_list--item"><a data-hover="Como funciona" href="">Como funciona</a></li>
+        <li class="lpz-nav_list--item"><a data-hover="Planos e Preços" href="">Planos e Preços</a></li>
+        <li class="lpz-nav_list--item"><a data-hover="Suporte" href="">Suporte</a></li>
+        <li class="lpz-nav_list--item lpz-nav_button"><a data-hover="Criar um evento" href="">Criar um evento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="lpz-mb">
+    <h3 class="lpz-mb_title lpz-mb_title--red">Crie a página do seu evento</h3>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media1"></div>
+      <h4 class="lpz-mb_item--title">Sua página, Sua cara</h4>
+      <p class="lpz-smb_item--p">Personalize sua página com suas informações, cores e imagens. Deixe-a sexy!</p>
+    </article>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media2"></div>
+      <h4 class="lpz-mb_item--title">Todo tipo de acesso</h4>
+      <p class="lpz-smb_item--p">Seu público vê e compra o seu evento de qualquer lugar. Sem preconceito!</p>
+    </article>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media3"></div>
+      <h4 class="lpz-mb_item--title">Espalhe a notícia</h4>
+      <p class="lpz-smb_item--p">Sua página pode ser integrada com Facebook, Google+ e Twitter.</p>
+    </article>
+  </section>
+
+   <section class="lpz-mb">
+    <h3 class="lpz-mb_title lpz-mb_title--blue">Configure os seus tickets</h3>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media4"></div>
+      <h4 class="lpz-mb_item--title">Seu ticket, seu controle</h4>
+      <p class="lpz-smb_item--p">Público ou secreto? Pago ou gratuito? Você escolhe, o poder é todo seu! ;)</p>
+    </article>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media5"></div>
+      <h4 class="lpz-mb_item--title">Meios de Pagamento</h4>
+      <p class="lpz-smb_item--p">Venda tickets com cartão, débito em conta ou boleto bancário.</p>
+    </article>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media6"></div>
+      <h4 class="lpz-mb_item--title">Parcele, parcele</h4>
+      <p class="lpz-smb_item--p">Seu público pode dividir a compra e você recebe de uma vez só!</p>
+    </article>
+  </section>
+
+  <section class="lpz-mb">
+    <h3 class="lpz-mb_title lpz-mb_title--yellow">Gerencie e promova</h3>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media7"></div>
+      <h4 class="lpz-mb_item--title">Seu público, seu povo</h4>
+      <p class="lpz-smb_item--p">Acompanhe, adicione e convide pessoas de sua lista de e-mails. Lote a casa!</p>
+    </article>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media8"></div>
+      <h4 class="lpz-mb_item--title">Hoje é promoção!</h4>
+      <p class="lpz-smb_item--p">Crie cupons de desconto e distribua para seu público mais-que-especial.</p>
+    </article>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media9"></div>
+      <h4 class="lpz-mb_item--title">Com quem eu falo?</h4>
+      <p class="lpz-smb_item--p">Atendimento do seu público sobre a compra do ticket? A gente cuida com carinho!</p>
+    </article>
+  </section>
+
+  <section class="lpz-mb">
+    <h3 class="lpz-mb_title lpz-mb_title--green">Receba e festeje</h3>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media10"></div>
+      <h4 class="lpz-mb_item--title">Quem paga?</h4>
+      <p class="lpz-smb_item--p">Você escolhe quem paga as taxas por ingresso: você ou o participante.</p>
+    </article>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media11"></div>
+      <h4 class="lpz-mb_item--title">Corra pro abraço</h4>
+      <p class="lpz-smb_item--p">Solicite repasses de seu saldo direto para sua conta bancária em 3 dias úteis</p>
+    </article>
+    <article class="lpz-mb_item">
+      <div class="lpz-mb_item--image howdoesitwork-media12"></div>
+      <h4 class="lpz-mb_item--title">Por um mundo melhor</h4>
+      <p class="lpz-smb_item--p">Câncer infantil e algumas outras causas? Não cobramos taxas.</p>
+    </article>
+  </section>
+
+  <section class="lpz-pb">
+    <h3 class="lpz-pb_title">Quanto é a taxa por ticket?</h3>
+    <h6 class="lpz-pb_title--sub">De quem a taxa será cobrada?</h6>
+    <fieldset class="lpz-pb_selector">
+      <label class="lpz-radio">
+        <input class="lpz-radio_input" type="radio" checked="checked" name="tax" />
+        <span class="lpz-radio_span"></span>Organizador
+      </label>
+      <label class="lpz-radio">
+        <input class="lpz-radio_input" type="radio" checked="checked" name="tax" />
+        <span class="lpz-radio_span"></span>Comprador
+      </label>
+    </fieldset>
+    <h6 class="lpz-pb_title--sub lpz-pb_title--sub__extra">Arraste a estrela  para selecionar o valor de seu ticket e verifique qual será a taxa por venda.</h6>
+    <div class="lpz-ranger">
+      <div class="lpz-ranger_tooltip" data-ranger="tooltip">
+        <span class="lpz-ranger_tooltip--title">Valor do Ticket</span>
+        <span class="lpz-ranger_tooltip--value">
+          <em>R$</em>
+          <output class="lpz-ranger_value" for="range" data-ranger="value"></output>
+        </span>
+      </div>
+      <div class="lpz-ranger_wrapper">
+        <input class="lpz-ranger_range" max="400" type="range" value="50" data-lpz="ranger" />
+      </div>
+    </div>
+    <h4 class="lpz-pb_title--highlight">O comprador pagará 30 reais e você receberá 27 reais</h4>
+    <p class="lpz-pb_p">Desse valor, aproximadamente 1,50 é da taxa do Eventick e 1,50 das taxas do meio de pagamento (PagSeguro, Cartao de Crédito, Débito em Conta e Boleto Bancário).</p>
+  </section>
+
+  <section class="lpz-tb">
+    <h3 class="lpz-tb_title">Junte-se a 1.987 clientes e parceiros<br/>que já venderam 210.021 tickets com o Eventick</h3>
+    <ul class="lpz-tb_list">
+      <li class="lpz-tb_list--item">
+        <div class="lpz-tb_list--item__image testemonials-client1-logo"></div>
+        <p class="lpz-tb_list--item__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo lectus eu elit rutrum, vel pharetra tellus hendrerit. Donec vel arcu pretium, sodales tellus quis, volutpat urna.
+        <span class="lpz-tb_list--item__span">
+          Emanuel Vilar
+          <span class="lpz-tb_list--item__span__highlight">Festa Javali</span>
+        </span></p>
+      </li>
+      <li class="lpz-tb_list--item">
+        <div class="lpz-tb_list--item__image testemonials-client2-logo"></div>
+        <p class="lpz-tb_list--item__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo lectus eu elit rutrum, vel pharetra tellus hendrerit. Donec vel arcu pretium, sodales tellus quis, volutpat urna.
+        <span class="lpz-tb_list--item__span">
+          Emanuel Vilar
+          <span class="lpz-tb_list--item__span__highlight">Festa Javali</span>
+        </span></p>
+      </li>
+      <li class="lpz-tb_list--item">
+        <div class="lpz-tb_list--item__image testemonials-client3-logo"></div>
+        <p class="lpz-tb_list--item__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo lectus eu elit rutrum, vel pharetra tellus hendrerit. Donec vel arcu pretium, sodales tellus quis, volutpat urna.
+        <span class="lpz-tb_list--item__span">
+          Emanuel Vilar
+          <span class="lpz-tb_list--item__span__highlight">Festa Javali</span>
+        </span></p>
+      </li>
+      <li class="lpz-tb_list--item">
+        <div class="lpz-tb_list--item__image testemonials-client4-logo"></div>
+        <p class="lpz-tb_list--item__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo lectus eu elit rutrum, vel pharetra tellus hendrerit. Donec vel arcu pretium, sodales tellus quis, volutpat urna.
+        <span class="lpz-tb_list--item__span">
+          Emanuel Vilar
+          <span class="lpz-tb_list--item__span__highlight">Festa Javali</span>
+        </span></p>
+      </li>
+      <li class="lpz-tb_list--item">
+        <div class="lpz-tb_list--item__image testemonials-client5-logo"></div>
+        <p class="lpz-tb_list--item__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo lectus eu elit rutrum, vel pharetra tellus hendrerit. Donec vel arcu pretium, sodales tellus quis, volutpat urna.
+        <span class="lpz-tb_list--item__span">
+          Emanuel Vilar
+          <span class="lpz-tb_list--item__span__highlight">Festa Javali</span>
+        </span></p>
+      </li>
+      <li class="lpz-tb_list--item">
+        <div class="lpz-tb_list--item__image testemonials-client6-logo"></div>
+        <p class="lpz-tb_list--item__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo lectus eu elit rutrum, vel pharetra tellus hendrerit. Donec vel arcu pretium, sodales tellus quis, volutpat urna.
+        <span class="lpz-tb_list--item__span">
+          Emanuel Vilar
+          <span class="lpz-tb_list--item__span__highlight">Festa Javali</span>
+        </span></p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="lpz-efb">
+    <h3 class="lpz-efb_title">Que tal começar a vender tickets para o seu evento?</h3>
+    <form class="lpz-efb_form" action="">
+      <input class="lpz-efb_form--input lpz-efb_form--input__text" type="text" placeholder="Nome">
+      <input class="lpz-efb_form--input  lpz-efb_form--input__email" type="text" placeholder="E-mail">
+      <button class="lpz-efb_form--button" type="submit">Criar um evento</button>
+      <h6 class="lpz-efb_line">
+        ou <a class="lpz-efb_line--link" href="">entre em contato com a gente</a>
+        e tire todas as suas dúvidas!
+      </h6>
+    </form>
+  </section>
+
+  <section class="lpz-sb">
+    <h3 class="lpz-sb_title">Fale com Eventick</h3>
+    <ul class="lpz-sb_list">
+      <li class="lpz-sb_list--item">
+        <a href="#">
+          <i class="lpz-sb_list--item__icon fa fa-wrench"></i>
+          <h5 class="lpz-sb_list--item__title">Central de Atendimento</h5>
+        </a>
+      </li>
+      <li class="lpz-sb_list--item">
+        <a href="#">
+          <i class="lpz-sb_list--item__icon fa fa-envelope"></i>
+          <h5 class="lpz-sb_list--item__title">Escreva<br/>pra gente</h5>
+        </a>
+      </li>
+      <li class="lpz-sb_list--item">
+        <a href="#">
+          <i class="lpz-sb_list--item__icon fa fa-facebook"></i>
+          <h5 class="lpz-sb_list--item__title">Facebook</h5>
+        </a>
+      </li>
+      <li class="lpz-sb_list--item">
+        <a href="#">
+          <i class="lpz-sb_list--item__icon fa fa-twitter"></i>
+          <h5 class="lpz-sb_list--item__title">Twitter</h5>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="lpz-lb">
+    <!-- <h3 class="lpz-lb_title">Imprensa</h3> -->
+    <h5 class="lpz-lb_title--sub lpz-lb_no-title">Últimas do Blog</h5>
+    <ul class="lpz-lb_list">
+        <li class="lpz-lb_list--item"><a href="">Lorem ipsum dolor sit amet</a></li>
+        <li class="lpz-lb_list--item"><a href="">Lorem ipsum dolor sit amet</a></li>
+        <li class="lpz-lb_list--item"><a href="">Lorem ipsum dolor sit amet</a></li>
+        <li class="lpz-lb_list--item"><a href="">Lorem ipsum dolor sit amet</a></li>
+      </ul>
+  </section>
+
+  <section class="lpz-qb">
+    <h3 class="lpz-qb_title">Feito por gente fina, elegante e sincera</h3>
+    <h5 class="lpz-qb_title--sub">São Paulo, Brasil</h5>
+  </section>
+
+  <footer class="lpz-footer">
+    <nav class="lpz-footer_nav">
+      <ul class="lpz-footer_nav--list">
+        <li class="lpz-footer_nav--list__item"><a href="">Blog</a></li>
+        <li class="lpz-footer_nav--list__item"><a href="">Imprensa</a></li>
+        <li class="lpz-footer_nav--list__item"><a href="">Clipping</a></li>
+        <li class="lpz-footer_nav--list__item"><a href="">Equipe</a></li>
+      </ul>
+    </nav>
+    <img src="images/logo-footer.png" alt="" class="lpz-footer_image">
+  </footer>
+  </div>
+
+  <script src="scripts/app.js"></script>
+  </body>
+</html>

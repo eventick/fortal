@@ -1,0 +1,88 @@
+input[type="range"]
+  outline: none !important
+
+.lpz-ranger
+  width: 100%
+
+.lpz-ranger_wrapper
+  position: relative
+  text-align: center
+  height: 30px
+  width: 90%
+  margin: 0 auto
+
+.lpz-ranger_range
+  position: absolute
+  left: 0
+  padding: 0
+  border: 1px solid white
+  box-sizing: border-box
+  -webkit-appearance: none
+  background: #fff
+  height: 0
+  width: 100%
+  outline: none
+
+  &:active, &:hover, &:focus
+    outline: none
+
+  &::-moz-range-thumb
+    cursor: pointer
+    height: 55px
+    width: 45px
+    border: none
+    background: url(../images/star-white.png) no-repeat bottom
+    outline: none
+    margin-top: -50px
+    position: relative
+    z-index: 200
+
+  &::-ms-thumb
+    cursor: pointer
+    height: 48px
+    width: 45px
+    border: none
+    background: url(../images/star-white.png) no-repeat
+
+  &::-ms-tooltip
+    display: none
+
+  &::-ms-track
+    height: 0px
+    border: none
+
+  &::-webkit-slider-thumb
+    -webkit-appearance: none
+    cursor: pointer
+    height: 48px
+    width: 45px
+    border: none
+    background: url(../images/star-white.png) no-repeat
+
+  &::-moz-range-track
+    height: 100%
+    outline: none
+
+.lpz-ranger_tooltip
+  width: 120px
+  position: relative
+  margin-left: -45px
+  margin-bottom: 20px
+  line-height: 1
+
+.lpz-ranger_tooltip--title
+  text-transform: uppercase
+  opacity: .8
+  +proxima_semibold()
+  +sizing(12, 14)
+  line-height: 1
+
+.lpz-ranger_tooltip--value
+  +sizing(30, 14)
+  line-height: 1
+  em
+    opacity: .5
+    font-style: normal
+
+.lpz-ranger_value
+  +proxima_semibold()

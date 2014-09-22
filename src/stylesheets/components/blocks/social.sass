@@ -1,0 +1,42 @@
+// colors
+
+// components
+
+.lpz-sb
+  text-align: center
+  background: $clr-brnd-bg-yellow
+  color: $clr-brnd-white
+  +cf()
+  padding: 60px 5% 60px
+
+.lpz-sb_title
+  +pacifico()
+
+.lpz-sb_list
+  +unordered_list()
+  +inline-blocked_list()
+
+.lpz-sb_list--item
+  +col(1/4)
+  a
+    color: $clr-brnd-white
+
+.lpz-sb_list--item__icon
+  box-sizing: border-box
+  background-color: adjust-lightness($clr-brnd-bg-yellow, -5)
+  width: 100%
+  padding: 12.5% 0
+  transition: all 0.3s
+  &.fa
+    &:before
+      +sizing(160, 14)
+  &:hover
+    background-color: $clr-land-gy-2
+
+.lpz-sb_list--item__title
+  +proxima_regular()
+  margin: 15px auto 0
+  text-transform: uppercase
+
+
+

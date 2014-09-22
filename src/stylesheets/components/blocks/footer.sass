@@ -1,0 +1,35 @@
+// colors
+
+$crl-lpz-links: #767784
+
+.lpz-footer
+  +cf()
+  background-color: $clr-land-bg-gy-dark
+  padding: 40px 0
+  text-align: center
+
+.lpz-footer_nav
+
+.lpz-footer_nav--list
+  +unordered_list()
+  +inline-blocked_list()
+  // box-model
+  display           : inline-block
+
+.lpz-footer_nav--list__item
+  // text
+  text-transform    : uppercase
+  margin-right      : 15px
+
+  +sizing(18, 14)
+
+  &:last-child
+    margin: 0
+
+  a
+    +link($crl-lpz-links, $clr-land-yellow)
+
+.lpz-footer_image
+  +center()
+  margin-top: 10px
+

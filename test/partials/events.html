@@ -1,0 +1,41 @@
+<section class="lpz-eb">
+  <div class="lpz-eb_control">
+    <div class="lpz-eb_control--buttongroup">
+      <a href="" class="lpz-eb_control--button">
+        <span class="lpz-eb_span">exibindo eventos em</span>
+        <strong>todo o Brasil</strong></a>
+      <a href="" class="lpz-eb_control--button">
+      <i class="lpz-eb_control--button__icon fa fa-calendar"></i>
+        <span class="lpz-eb_span">exibindo eventos</span>
+        <strong>futuros</strong></a>
+    </div>
+
+    <fieldset class="lpz-eb_orderby">
+      <span class="lpz-eb_orderby--title">ordenar por</span>
+      <label class="lpz-radio">
+        <input class="lpz-radio_input" type="radio" checked="checked" name="tax" />
+        <span class="lpz-radio_span"></span>relevância
+      </label>
+      <label class="lpz-radio">
+        <input class="lpz-radio_input" type="radio" checked="checked" name="tax" />
+        <span class="lpz-radio_span"></span>data
+      </label>
+    </fieldset>
+    <form ng-submit="filterEvents()">
+      <input type="search" name="q" ng-model="q" value="">
+      <input type="submit" id="submit" value="Buscar" />
+    </form>
+  </div>
+  <ul class="lpz-eb_list">
+    <li class="lpz-eb_list--item" ng-repeat="event in events">
+      <img src="https://s3-sa-east-1.amazonaws.com/eventick-events-images/25d3b27a-d79f-44c4-b4d2-97ac92900083/sua29014cover.crop_851x254_0,31.scale_crop_357x107.jpg" alt="">
+      <div class="lpz-eb_list--item__wrapper">
+        <h5 class="lpz-eb_list--item__sub">
+          <span class="lpz-eb_list--item__sub__item">{{event.address_locality}}</span>
+          <span class="lpz-eb_list--item__sub__item">{{event.start_at}}</span>
+        </h5>
+        <h5 class="lpz-eb_list--item__title">{{event.title}}</h5>
+      </div>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,89 @@
+// sprite import
+$testemonials: sprite-map("testemonials/*.png", $layout: smart)
+
+.lpz-tb
+  text-align: center
+  background: $clr-brnd-bg-purple
+  color: $clr-white
+  padding: 50px 5%
+  +cf()
+
+.lpz-tb_title
+  +pacifico()
+
+.lpz-tb_list
+  +unordered_list()
+  +inline-blocked_list()
+
+.lpz-tb_list--item
+  +col(1/3, $gutter: 6)
+  box-sizing: border-box
+  margin-top: 3%
+  margin-bottom: 3%
+  position: relative
+  overflow: hidden
+  height: 290px
+  transition: opacity 1s
+
+  &:nth-child(3n + 3)
+    margin-right: 0
+
+  cursor: pointer
+  &:hover
+    .lpz-tb_list--item__image
+      opacity: 0
+    .lpz-tb_list--item__p
+      opacity: 1
+
+  &:after
+    content: ""
+    +align(horizontal)
+    background-image: sprite-url($testemonials)
+    background-repeat: no-repeat
+    z-index: 1
+
+  @for $i from 1 through 6
+    &:nth-child(#{$i})
+      position: relative
+      &:after
+        background-position: sprite-position($testemonials, client#{$i}_pb)
+        @include sprite-dimensions($testemonials, client#{$i}_pb)
+      &:hover
+        &:after
+          background-position: sprite-position($testemonials, client#{$i})
+
+.lpz-tb_list--item__image
+  +align(both)
+  transition: opacity 0.5s
+  opacity: 1
+  z-index: 2
+
+.lpz-tb_list--item__p
+  box-sizing: border-box
+  +align(both)
+  width: 75%
+  max-width: 260px
+  margin-top: 0
+  transition: opacity 0.3s
+  opacity: 0
+  z-index: 2
+
+.lpz-tb_list--item__span
+  display: block
+  margin-top: 10px
+  line-height: 1
+
+.lpz-tb_list--item__span__highlight
+  display: block
+  opacity: .6
+  margin-top: 5px
+
+
+// logos sprites
+
+@for $i from 1 through 6
+  .testemonials-client#{$i}-logo
+    background-image: sprite-url($testemonials)
+    background-repeat: no-repeat
+    background-position: sprite-position($testemonials, client#{$i}-logo)
+    @include sprite-dimensions($testemonials, client#{$i}-logo)

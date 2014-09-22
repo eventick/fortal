@@ -1,0 +1,85 @@
+// Inputton
+
+.lpz-inputton
+  border-radius: 5px
+  background-color: $clr-white
+  padding: 4px
+  box-sizing: border-box
+
+.lpz-inputton_input
+  +placeholder()
+  +span(14/20)
+  padding: 14px 0 10px 15px
+  border: none
+  +proxima_semibold()
+  color: #666
+  box-sizing: border-box
+  outline: none
+  opacity: 1
+
+.lpz-inputton_button
+  +span(4/20)
+  +button_input()
+  +proxima_semibold()
+  float: right
+
+.lpz-inputton_icon
+  float: left
+  color: $clr-land-purple
+  margin: 8px .5% 0 1%
+  &.fa
+    &:before
+      +sizing(28, 14)
+
+// Inputton 2
+
+.lpz-inputton2
+  background-color: $clr-land-purple
+  padding: 4px
+  box-sizing: border-box
+  border: none
+  height: 80px
+  margin: 0
+
+.lpz-inputton2_input
+  +placeholder()
+  +span(16/20)
+  padding: 24px 0 10px 5px
+  border: none
+  +proxima_semibold()
+  color: $clr-land-gy-3
+  background-color: $clr-land-purple
+  box-sizing: border-box
+  +sizing(20,14)
+  outline: none
+  opacity: 1
+  color: $clr-white
+
+.lpz-inputton2_button
+  +span(2.5/20)
+  +button_bordered($clr-white)
+  +proxima_semibold()
+  background-color: $clr-land-purple
+  float: right
+  margin-top: 8px
+
+.lpz-inputton2_icon
+  float: left
+  color: $clr-white
+  margin-right: 2%
+  margin-top: 20px
+  &.fa
+    &:before
+      +sizing(32, 14)
+
+// Media Queries
+
+@media (min-width: 769px) and (max-width: 980px)
+  .lpz-inputton_input
+    +span(13/20)
+
+  .lpz-inputton_button
+    +span(5/20)
+    +button_input()
+    +proxima_semibold()
+    float: right

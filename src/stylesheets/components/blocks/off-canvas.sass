@@ -1,0 +1,52 @@
+.lpz-offcanvas
+  width: 80%
+  background-color: $clr-brnd-bg-yellow
+  position: fixed
+  left: -100%
+  height: 100%
+  z-index: 100
+  color: $clr-white
+  padding: 30px 3%
+  box-sizing: border-box
+  transition: transform .5s
+
+.lpz-offcanvas_list
+  +unordered_list()
+  text-transform: uppercase
+  +sizing(18, 14)
+
+
+.lpz-offcanvas_list--item
+  margin-bottom: 10px
+  transition: all 0.3s
+  cursor: pointer
+  a
+    +link($clr-white, $clr-land-gy-2)
+  &:hover
+    .lpz-offcanvas_list--item__icon
+      background-color: $clr-land-gy-2
+      color: $clr-white
+    a
+      color: $clr-land-gy-2
+
+
+.lpz-offcanvas_list--item__icon
+  padding: 5%
+  margin-right: 10px
+  background-color: adjust-lightness($clr-brnd-bg-yellow, -2)
+  transition: all 0.3s
+  &.fa
+    &:before
+      +sizing(24, 14)
+
+.lpz-body
+  transition: transform .5s
+  &:before
+    content: ''
+    background-color: #fff
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -2

@@ -1,0 +1,39 @@
+// Navigation
+
+.lpz-sheader
+  height: 50px
+  width: 100%
+  padding: 40px 0
+  background: #fff
+  position: absolute
+  box-sizing: border-box
+  +cf()
+
+.lpz-nav
+  +align(both)
+  display: inline-block
+  width: 90%
+  height: 30px
+  background: url(../images/star-yellow.png) no-repeat left
+
+.lpz-nav_list
+  +unordered_list()
+  +inline-blocked_list()
+  width: 884px
+  margin: 4px auto 0
+
+.lpz-nav_list--item
+  text-transform: uppercase
+  margin-right: 15px
+  +sizing(18,14)
+  font-weight: 600
+
+  &:last-child
+    margin-right: 0
+
+  a
+    +link($clr-land-gy-2, $clr-land-gy-3)
+
+.lpz-nav_button
+  margin-left: 50px
+
