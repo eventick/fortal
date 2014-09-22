@@ -1,4 +1,4 @@
-![](http://lolp1.c3cdn.com/wp/wp-content/uploads/2013/12/logo.png)
+![](http://fortal.com.br/2014/wp-content/uploads/2013/11/foto_cidadefortal.jpg)
 # Eventick's Bootstrap
 
 
@@ -6,8 +6,8 @@
 
 ```
 $ npm install -g gulp
-$ git clone https://github.com/eventick/lollapalooza.git
-$ cd lollapalooza
+$ git clone https://github.com/eventick/fortal.git
+$ cd fortal
 $ npm install
 ```
 
