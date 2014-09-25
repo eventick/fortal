@@ -4,9 +4,9 @@
 </form>
 
 <ul>
-  <li ng-repeat="state in states"><a href="/#/eventos?estado={{state.value}}">{{state.value}} ({{state.count}})</a></li>
+  <li ng-repeat="state in filters.states"><a href="/#/eventos?estado={{state.value}}">{{state.value}} ({{state.count}})</a></li>
 </ul>
 
 <ul>
-  <li ng-repeat="theme in themes"><a href="/#/eventos?tematica={{theme.value}}">{{theme.value}} ({{theme.count}})</a></li>
+  <li ng-repeat="theme in filters.themes"><a href="/#/eventos?tematica={{theme.value}}">{{theme.value | themePrettyPrint}} ({{theme.count}})</a></li>
 </ul>

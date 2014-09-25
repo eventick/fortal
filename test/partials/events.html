@@ -1,14 +1,13 @@
 <section class="lpz-eb">
   <div class="lpz-eb_control">
-    <select ng-model="current_state"  ng-change="filterEvents()">
+    <select ng-model="filters.current_state" ng-change="filterEvents()" ng-options="state.value as state.value for state in filters.states">
       <option value="">Estados</option>
-      <option ng-repeat="state in states" ng-value="state.value">{{state.value}}</option>
     </select>
 
-    <select ng-model="current_theme" ng-change="filterEvents()">
-      <option value="">Temática</option>
-      <option ng-repeat="theme in themes" ng-value="theme.value">{{theme.value}}</option>
+    <select ng-model="filters.current_theme" ng-change="filterEvents()" ng-options="theme.value as (theme.value | themePrettyPrint) for theme in filters.themes">
+      <option value="">Temáticas</option>
     </select>
+
     <form ng-submit="filterEvents()">
       <input type="search" name="q" ng-model="q" value="">
       <input type="submit" id="submit" value="Buscar" />
@@ -16,7 +15,7 @@
   </div>
   <ul class="lpz-eb_list">
     <li class="lpz-eb_list--item" ng-repeat="event in events">
-      <img src="https://s3-sa-east-1.amazonaws.com/eventick-events-images/25d3b27a-d79f-44c4-b4d2-97ac92900083/sua29014cover.crop_851x254_0,31.scale_crop_357x107.jpg" alt="">
+      <img ng-src="{{event.listing_image_url | placeholderForTheme:event.theme}}" alt="">
       <div class="lpz-eb_list--item__wrapper">
         <h5 class="lpz-eb_list--item__sub">
           <span class="lpz-eb_list--item__sub__item">{{event.address_locality}}</span>
